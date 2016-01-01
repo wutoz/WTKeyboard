@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D88452151C2F8BDC00CF2428 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D88452141C2F8BDC00CF2428 /* main.m */; };
+		D88452181C2F8BDC00CF2428 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88452171C2F8BDC00CF2428 /* AppDelegate.m */; };
+		D884521B1C2F8BDC00CF2428 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D884521A1C2F8BDC00CF2428 /* ViewController.m */; };
+		D884521E1C2F8BDC00CF2428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D884521C1C2F8BDC00CF2428 /* Main.storyboard */; };
+		D88452201C2F8BDC00CF2428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D884521F1C2F8BDC00CF2428 /* Assets.xcassets */; };
+		D88452231C2F8BDC00CF2428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88452211C2F8BDC00CF2428 /* LaunchScreen.storyboard */; };
+		D88452431C2F8BF200CF2428 /* WTKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D884522C1C2F8BF200CF2428 /* WTKeyboard.m */; };
+		D88452441C2F8BF200CF2428 /* WTKeyboardCardPad.m in Sources */ = {isa = PBXBuildFile; fileRef = D884522E1C2F8BF200CF2428 /* WTKeyboardCardPad.m */; };
+		D88452451C2F8BF200CF2428 /* WTKeyboardCharPad.m in Sources */ = {isa = PBXBuildFile; fileRef = D88452301C2F8BF200CF2428 /* WTKeyboardCharPad.m */; };
+		D88452461C2F8BF200CF2428 /* WTKeyboardDecimalPad.m in Sources */ = {isa = PBXBuildFile; fileRef = D88452321C2F8BF200CF2428 /* WTKeyboardDecimalPad.m */; };
+		D88452471C2F8BF200CF2428 /* WTKeyboardNumPad.m in Sources */ = {isa = PBXBuildFile; fileRef = D88452341C2F8BF200CF2428 /* WTKeyboardNumPad.m */; };
+		D88452481C2F8BF200CF2428 /* WTKeyboardStockPad.m in Sources */ = {isa = PBXBuildFile; fileRef = D88452371C2F8BF200CF2428 /* WTKeyboardStockPad.m */; };
+		D884524A1C2F8BF200CF2428 /* keyboard_stock_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D884523B1C2F8BF200CF2428 /* keyboard_stock_background.png */; };
+		D884524B1C2F8BF200CF2428 /* keyboard_stock_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = D884523C1C2F8BF200CF2428 /* keyboard_stock_cancel.png */; };
+		D88452501C2F8C0100CF2428 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D884524F1C2F8C0100CF2428 /* QuartzCore.framework */; };
+		D88452521C2F8C6600CF2428 /* WTKeyboard.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D88452511C2F8C6600CF2428 /* WTKeyboard.podspec */; };
+		D88452551C2F907700CF2428 /* WTKeyboardUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D88452541C2F907700CF2428 /* WTKeyboardUtils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D88452101C2F8BDC00CF2428 /* WTKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88452141C2F8BDC00CF2428 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D88452161C2F8BDC00CF2428 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D88452171C2F8BDC00CF2428 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D88452191C2F8BDC00CF2428 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D884521A1C2F8BDC00CF2428 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D884521D1C2F8BDC00CF2428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D884521F1C2F8BDC00CF2428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D88452221C2F8BDC00CF2428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D88452241C2F8BDC00CF2428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D884522B1C2F8BF200CF2428 /* WTKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKeyboard.h; sourceTree = "<group>"; };
+		D884522C1C2F8BF200CF2428 /* WTKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKeyboard.m; sourceTree = "<group>"; };
+		D884522D1C2F8BF200CF2428 /* WTKeyboardCardPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKeyboardCardPad.h; sourceTree = "<group>"; };
+		D884522E1C2F8BF200CF2428 /* WTKeyboardCardPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKeyboardCardPad.m; sourceTree = "<group>"; };
+		D884522F1C2F8BF200CF2428 /* WTKeyboardCharPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKeyboardCharPad.h; sourceTree = "<group>"; };
+		D88452301C2F8BF200CF2428 /* WTKeyboardCharPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKeyboardCharPad.m; sourceTree = "<group>"; };
+		D88452311C2F8BF200CF2428 /* WTKeyboardDecimalPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKeyboardDecimalPad.h; sourceTree = "<group>"; };
+		D88452321C2F8BF200CF2428 /* WTKeyboardDecimalPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKeyboardDecimalPad.m; sourceTree = "<group>"; };
+		D88452331C2F8BF200CF2428 /* WTKeyboardNumPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKeyboardNumPad.h; sourceTree = "<group>"; };
+		D88452341C2F8BF200CF2428 /* WTKeyboardNumPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKeyboardNumPad.m; sourceTree = "<group>"; };
+		D88452351C2F8BF200CF2428 /* WTKeyboardProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKeyboardProtocol.h; sourceTree = "<group>"; };
+		D88452361C2F8BF200CF2428 /* WTKeyboardStockPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKeyboardStockPad.h; sourceTree = "<group>"; };
+		D88452371C2F8BF200CF2428 /* WTKeyboardStockPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKeyboardStockPad.m; sourceTree = "<group>"; };
+		D884523B1C2F8BF200CF2428 /* keyboard_stock_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_stock_background.png; sourceTree = "<group>"; };
+		D884523C1C2F8BF200CF2428 /* keyboard_stock_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_stock_cancel.png; sourceTree = "<group>"; };
+		D884524F1C2F8C0100CF2428 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D88452511C2F8C6600CF2428 /* WTKeyboard.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WTKeyboard.podspec; sourceTree = "<group>"; };
+		D88452531C2F907700CF2428 /* WTKeyboardUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKeyboardUtils.h; sourceTree = "<group>"; };
+		D88452541C2F907700CF2428 /* WTKeyboardUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKeyboardUtils.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D884520D1C2F8BDC00CF2428 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D88452501C2F8C0100CF2428 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D88452071C2F8BDC00CF2428 = {
+			isa = PBXGroup;
+			children = (
+				D88452511C2F8C6600CF2428 /* WTKeyboard.podspec */,
+				D884524F1C2F8C0100CF2428 /* QuartzCore.framework */,
+				D88452121C2F8BDC00CF2428 /* WTKeyboard */,
+				D88452111C2F8BDC00CF2428 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D88452111C2F8BDC00CF2428 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D88452101C2F8BDC00CF2428 /* WTKeyboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D88452121C2F8BDC00CF2428 /* WTKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D884522A1C2F8BF200CF2428 /* WTKeyboard */,
+				D88452161C2F8BDC00CF2428 /* AppDelegate.h */,
+				D88452171C2F8BDC00CF2428 /* AppDelegate.m */,
+				D88452191C2F8BDC00CF2428 /* ViewController.h */,
+				D884521A1C2F8BDC00CF2428 /* ViewController.m */,
+				D884521C1C2F8BDC00CF2428 /* Main.storyboard */,
+				D884521F1C2F8BDC00CF2428 /* Assets.xcassets */,
+				D88452211C2F8BDC00CF2428 /* LaunchScreen.storyboard */,
+				D88452241C2F8BDC00CF2428 /* Info.plist */,
+				D88452131C2F8BDC00CF2428 /* Supporting Files */,
+			);
+			path = WTKeyboard;
+			sourceTree = "<group>";
+		};
+		D88452131C2F8BDC00CF2428 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D88452141C2F8BDC00CF2428 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D884522A1C2F8BF200CF2428 /* WTKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D884523A1C2F8BF200CF2428 /* Resources */,
+				D884522B1C2F8BF200CF2428 /* WTKeyboard.h */,
+				D884522C1C2F8BF200CF2428 /* WTKeyboard.m */,
+				D884522D1C2F8BF200CF2428 /* WTKeyboardCardPad.h */,
+				D884522E1C2F8BF200CF2428 /* WTKeyboardCardPad.m */,
+				D884522F1C2F8BF200CF2428 /* WTKeyboardCharPad.h */,
+				D88452301C2F8BF200CF2428 /* WTKeyboardCharPad.m */,
+				D88452311C2F8BF200CF2428 /* WTKeyboardDecimalPad.h */,
+				D88452321C2F8BF200CF2428 /* WTKeyboardDecimalPad.m */,
+				D88452331C2F8BF200CF2428 /* WTKeyboardNumPad.h */,
+				D88452341C2F8BF200CF2428 /* WTKeyboardNumPad.m */,
+				D88452351C2F8BF200CF2428 /* WTKeyboardProtocol.h */,
+				D88452361C2F8BF200CF2428 /* WTKeyboardStockPad.h */,
+				D88452371C2F8BF200CF2428 /* WTKeyboardStockPad.m */,
+				D88452531C2F907700CF2428 /* WTKeyboardUtils.h */,
+				D88452541C2F907700CF2428 /* WTKeyboardUtils.m */,
+			);
+			path = WTKeyboard;
+			sourceTree = "<group>";
+		};
+		D884523A1C2F8BF200CF2428 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D884523B1C2F8BF200CF2428 /* keyboard_stock_background.png */,
+				D884523C1C2F8BF200CF2428 /* keyboard_stock_cancel.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D884520F1C2F8BDC00CF2428 /* WTKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D88452271C2F8BDC00CF2428 /* Build configuration list for PBXNativeTarget "WTKeyboard" */;
+			buildPhases = (
+				D884520C1C2F8BDC00CF2428 /* Sources */,
+				D884520D1C2F8BDC00CF2428 /* Frameworks */,
+				D884520E1C2F8BDC00CF2428 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WTKeyboard;
+			productName = WTKeyboard;
+			productReference = D88452101C2F8BDC00CF2428 /* WTKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D88452081C2F8BDC00CF2428 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = wutongr;
+				TargetAttributes = {
+					D884520F1C2F8BDC00CF2428 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = D884520B1C2F8BDC00CF2428 /* Build configuration list for PBXProject "WTKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D88452071C2F8BDC00CF2428;
+			productRefGroup = D88452111C2F8BDC00CF2428 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D884520F1C2F8BDC00CF2428 /* WTKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D884520E1C2F8BDC00CF2428 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D88452231C2F8BDC00CF2428 /* LaunchScreen.storyboard in Resources */,
+				D88452201C2F8BDC00CF2428 /* Assets.xcassets in Resources */,
+				D884521E1C2F8BDC00CF2428 /* Main.storyboard in Resources */,
+				D884524A1C2F8BF200CF2428 /* keyboard_stock_background.png in Resources */,
+				D884524B1C2F8BF200CF2428 /* keyboard_stock_cancel.png in Resources */,
+				D88452521C2F8C6600CF2428 /* WTKeyboard.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D884520C1C2F8BDC00CF2428 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D884521B1C2F8BDC00CF2428 /* ViewController.m in Sources */,
+				D88452431C2F8BF200CF2428 /* WTKeyboard.m in Sources */,
+				D88452441C2F8BF200CF2428 /* WTKeyboardCardPad.m in Sources */,
+				D88452451C2F8BF200CF2428 /* WTKeyboardCharPad.m in Sources */,
+				D88452471C2F8BF200CF2428 /* WTKeyboardNumPad.m in Sources */,
+				D88452181C2F8BDC00CF2428 /* AppDelegate.m in Sources */,
+				D88452551C2F907700CF2428 /* WTKeyboardUtils.m in Sources */,
+				D88452481C2F8BF200CF2428 /* WTKeyboardStockPad.m in Sources */,
+				D88452461C2F8BF200CF2428 /* WTKeyboardDecimalPad.m in Sources */,
+				D88452151C2F8BDC00CF2428 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D884521C1C2F8BDC00CF2428 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D884521D1C2F8BDC00CF2428 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D88452211C2F8BDC00CF2428 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D88452221C2F8BDC00CF2428 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D88452251C2F8BDC00CF2428 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D88452261C2F8BDC00CF2428 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D88452281C2F8BDC00CF2428 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WTKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wutongr.WTKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D88452291C2F8BDC00CF2428 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WTKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wutongr.WTKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D884520B1C2F8BDC00CF2428 /* Build configuration list for PBXProject "WTKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D88452251C2F8BDC00CF2428 /* Debug */,
+				D88452261C2F8BDC00CF2428 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D88452271C2F8BDC00CF2428 /* Build configuration list for PBXNativeTarget "WTKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D88452281C2F8BDC00CF2428 /* Debug */,
+				D88452291C2F8BDC00CF2428 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D88452081C2F8BDC00CF2428 /* Project object */;
+}
