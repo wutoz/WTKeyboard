@@ -98,29 +98,31 @@
 - (void)setKeyboardtype:(WTKeyboardType)keyboardtype{
     if(_keyboardtype != keyboardtype){
         _keyboardtype = keyboardtype;
+        UIImage *searchBgImage = [UIImage imageNamed:@"keyboard_search_background.png"];
+        UIImage *stockBgImage  = [UIImage imageNamed:@"keyboard_stock_background.png"];
         switch (_keyboardtype) {
             case WTKeyboardTypeCharPad:
-                self.keyboardBackground.image = [UIImage imageWithHexString:@"ffffff"];
+                self.keyboardBackground.image = searchBgImage;
                 _keyboard = [[WTKeyboardCharPad alloc]init];
                 break;
             case WTKeyboardTypeNumPad:
-                self.keyboardBackground.image = [UIImage imageNamed:@"keyboard_stock_background.png"];
+                self.keyboardBackground.image = stockBgImage;
                 _keyboard = [[WTKeyboardNumPad alloc]init];
                 break;
             case WTKeyboardTypeCardPad:
-                self.keyboardBackground.image = [UIImage imageNamed:@"keyboard_stock_background.png"];
+                self.keyboardBackground.image = stockBgImage;
                 _keyboard = [[WTKeyboardCardPad alloc]init];
                 break;
             case WTKeyboardTypeStockPad:
-                self.keyboardBackground.image = [UIImage imageNamed:@"keyboard_stock_background.png"];
+                self.keyboardBackground.image = stockBgImage;
                 _keyboard = [[WTKeyboardStockPad alloc]init];
                 break;
             case WTKeyboardTypeDecimalPad:
-                self.keyboardBackground.image = [UIImage imageNamed:@"keyboard_stock_background.png"];
+                self.keyboardBackground.image = stockBgImage;
                 _keyboard = [[WTKeyboardDecimalPad alloc]init];
                 break;
             case WTKeyboardTypeSearchPad:
-                self.keyboardBackground.image = [UIImage imageWithHexString:@"ffffff"];
+                self.keyboardBackground.image = searchBgImage;
                 _keyboard = [[WTKeyboardSearchPad alloc]init];
                 break;
                 
@@ -157,11 +159,12 @@
         {
             [_keyboard touchBegin:b type:WTKeyboardButtonTypeCharacterKey];
             [[UIDevice currentDevice] playInputClick];
+            break;
         }
     }
     
     for(UIButton *b in _keyboard.functionKeys){
-        if(CGRectContainsPoint(b.frame, location))
+        if(CGRectContainsPoint(b.frame, location) && b.hidden == NO)
         {
             [_keyboard touchBegin:b type:WTKeyboardButtonTypeFunctionKey];
             [[UIDevice currentDevice] playInputClick];
@@ -170,6 +173,7 @@
             if([b.titleLabel.text isEqualToString:@"退格"]){
                 [self checkBackButton:b touchesBegan:YES];
             }
+            break;
         }
     }
 }
@@ -182,13 +186,15 @@
         if(CGRectContainsPoint(b.frame, location) && b.hidden == NO)
         {
             [_keyboard touchMove:b type:WTKeyboardButtonTypeCharacterKey];
+            break;
         }
     }
     
     for (UIButton *b in _keyboard.functionKeys) {
-        if(CGRectContainsPoint(b.frame, location))
+        if(CGRectContainsPoint(b.frame, location) && b.hidden == NO)
         {
             [_keyboard touchMove:b type:WTKeyboardButtonTypeFunctionKey];
+            break;
         }
     }
 }
@@ -223,12 +229,13 @@
                 case WTKeyFunctionCancel:
                     break;
             }
+            break;
         }
     }
     
     //功能键
     for(UIButton *b in _keyboard.functionKeys){
-        if(CGRectContainsPoint(b.frame, location))
+        if(CGRectContainsPoint(b.frame, location) && b.hidden == NO)
         {
             switch ([_keyboard touchFunctionEnd:b]) {
                 case WTKeyFunctionInsert:
@@ -278,7 +285,7 @@
                 }
                     break;
             }
-            
+            break;
         }
     }
 }
