@@ -82,22 +82,22 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
         if(i < 10){//1.第一排
             UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(5 + (SCREEN_SIZE.width - 10) / 10 * i, 10, (SCREEN_SIZE.width - 30) / 10, 44)];
             [bt setUserInteractionEnabled:NO];
-            bt.layer.borderColor = [UIColor blackColor].CGColor;
-            bt.layer.borderWidth = 1.0f;
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
             [bt setTitle:kchars[i] forState:UIControlStateNormal];
             [btns addObject:bt];
         }else if (i < 19){//2.第二排
             UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(20 + (SCREEN_SIZE.width - 40) / 9 * (i - 10), 44 + 10 + 8, (SCREEN_SIZE.width - 60) / 9, 44)];
             [bt setUserInteractionEnabled:NO];
-            bt.layer.borderColor = [UIColor blackColor].CGColor;
-            bt.layer.borderWidth = 1.0f;
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
             [bt setTitle:kchars[i] forState:UIControlStateNormal];
             [btns addObject:bt];
         }else{//3.第三排
             UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(20 + (SCREEN_SIZE.width  - 40) / 9 * (i - 18), (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9, 44)];
             [bt setUserInteractionEnabled:NO];
-            bt.layer.borderColor = [UIColor blackColor].CGColor;
-            bt.layer.borderWidth = 1.0f;
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
             [bt setTitle:kchars[i] forState:UIControlStateNormal];
             [btns addObject:bt];
         }
@@ -110,24 +110,24 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
             UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(5 + (SCREEN_SIZE.width - 10) / 10 * i, 10, (SCREEN_SIZE.width - 30) / 10, 44)];
             [bt setUserInteractionEnabled:NO];
             bt.hidden = YES;
-            bt.layer.borderColor = [UIColor blackColor].CGColor;
-            bt.layer.borderWidth = 1.0f;
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
             [bt setTitle:kSymbol1[i] forState:UIControlStateNormal];
             [btns addObject:bt];
         }else if (i < 20){//2.第二排
             UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(5 + (SCREEN_SIZE.width - 10) / 10 * (i - 10), 44 + 10 + 8, (SCREEN_SIZE.width - 30) / 10, 44)];
             [bt setUserInteractionEnabled:NO];
             bt.hidden = YES;
-            bt.layer.borderColor = [UIColor blackColor].CGColor;
-            bt.layer.borderWidth = 1.0f;
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
             [bt setTitle:kSymbol1[i] forState:UIControlStateNormal];
             [btns addObject:bt];
         }else{//3.第三排
             UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(20 + (SCREEN_SIZE.width  - 40) / 9 + (SCREEN_SIZE.width - 40) / 9 * 7 / 5 * (i - 20), (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9 * 7 / 5, 44)];
             [bt setUserInteractionEnabled:NO];
             bt.hidden = YES;
-            bt.layer.borderColor = [UIColor blackColor].CGColor;
-            bt.layer.borderWidth = 1.0f;
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [bt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
             [bt setTitle:kSymbol1[i] forState:UIControlStateNormal];
             [btns addObject:bt];
         }
@@ -137,36 +137,36 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
     //1.shift
     UIButton *shiftbt = [[UIButton alloc]initWithFrame:CGRectMake(5, (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9 + 10, 44)];
     [shiftbt setUserInteractionEnabled:NO];
-    shiftbt.layer.borderColor = [UIColor blueColor].CGColor;
-    shiftbt.layer.borderWidth = 1.0f;
+    [shiftbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [shiftbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [shiftbt setTitle:@"⬆︎" forState:UIControlStateNormal];
     [funcbtns addObject:shiftbt];
     //2.delete
     UIButton *deletebt = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width - 5 - (SCREEN_SIZE.width - 60) / 9 - 10, (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9 + 10, 44)];
     [deletebt setUserInteractionEnabled:NO];
-    deletebt.layer.borderColor = [UIColor blueColor].CGColor;
-    deletebt.layer.borderWidth = 1.0f;
+    [deletebt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [deletebt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [deletebt setTitle:@"退格" forState:UIControlStateNormal];
     [funcbtns addObject:deletebt];
     //3.#+123
     UIButton *ABCbt = [[UIButton alloc]initWithFrame:CGRectMake(5, (44 + 8) * 3 + 10, 75, 44)];
     [ABCbt setUserInteractionEnabled:NO];
-    ABCbt.layer.borderColor = [UIColor blueColor].CGColor;
-    ABCbt.layer.borderWidth = 1.0f;
+    [ABCbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [ABCbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [ABCbt setTitle:@"#+123" forState:UIControlStateNormal];
     [funcbtns addObject:ABCbt];
     //4.空格
     UIButton *blankbt = [[UIButton alloc]initWithFrame:CGRectMake(5 + 80, (44 + 8) * 3 + 10, SCREEN_SIZE.width - 160 - 10, 44)];
     [blankbt setUserInteractionEnabled:NO];
-    blankbt.layer.borderColor = [UIColor blueColor].CGColor;
-    blankbt.layer.borderWidth = 1.0f;
+    [blankbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [blankbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [blankbt setTitle:@"空 格" forState:UIControlStateNormal];
     [funcbtns addObject:blankbt];
     //5.完成
     UIButton *OKbt = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width - 5 - 75, (44 + 8) * 3 + 10, 75, 44)];
     [OKbt setUserInteractionEnabled:NO];
-    OKbt.layer.borderColor = [UIColor blueColor].CGColor;
-    OKbt.layer.borderWidth = 1.0f;
+    [OKbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [OKbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [OKbt setTitle:@"完 成" forState:UIControlStateNormal];
     [funcbtns addObject:OKbt];
     

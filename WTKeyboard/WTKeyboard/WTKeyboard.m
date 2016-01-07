@@ -28,6 +28,7 @@
 #import "WTKeyboardCardPad.h"
 #import "WTKeyboardStockPad.h"
 #import "WTKeyboardDecimalPad.h"
+#import "WTKeyboardSearchPad.h"
 #import "WTKeyboardUtils.h"
 
 //#if __IPHONE_OS_VERSION_MIN_REQUIRED < 70000
@@ -99,7 +100,7 @@
         _keyboardtype = keyboardtype;
         switch (_keyboardtype) {
             case WTKeyboardTypeCharPad:
-                self.keyboardBackground.image = [UIImage imageWithHexString:@"6a6a6a"];;
+                self.keyboardBackground.image = [UIImage imageWithHexString:@"ffffff"];
                 _keyboard = [[WTKeyboardCharPad alloc]init];
                 break;
             case WTKeyboardTypeNumPad:
@@ -117,6 +118,10 @@
             case WTKeyboardTypeDecimalPad:
                 self.keyboardBackground.image = [UIImage imageNamed:@"keyboard_stock_background.png"];
                 _keyboard = [[WTKeyboardDecimalPad alloc]init];
+                break;
+            case WTKeyboardTypeSearchPad:
+                self.keyboardBackground.image = [UIImage imageWithHexString:@"ffffff"];
+                _keyboard = [[WTKeyboardSearchPad alloc]init];
                 break;
                 
         }

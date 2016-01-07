@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField4;
 @property (weak, nonatomic) IBOutlet UITextField *textField5;
 @property (weak, nonatomic) IBOutlet UITextField *textField6;
+@property (weak, nonatomic) IBOutlet UITextField *textField7;
 
 @end
 
@@ -29,6 +30,7 @@
     self.textField3.WTKeyboardType = WTKeyboardTypeCardPad;
     self.textField4.WTKeyboardType = WTKeyboardTypeStockPad;
     self.textField5.WTKeyboardType = WTKeyboardTypeCharPad;
+    self.textField6.WTKeyboardType = WTKeyboardTypeSearchPad;
     // Do any additional setup after loading the view, typically from a nib.
 }
 

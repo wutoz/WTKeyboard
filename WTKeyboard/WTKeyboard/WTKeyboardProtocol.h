@@ -47,7 +47,8 @@ typedef NS_ENUM(NSUInteger, WTKeyboardType) {
     WTKeyboardTypeCharPad,
     WTKeyboardTypeCardPad,
     WTKeyboardTypeDecimalPad,
-    WTKeyboardTypeStockPad
+    WTKeyboardTypeStockPad,
+    WTKeyboardTypeSearchPad
 };
 
 @protocol WTKeyboardProtocol <NSObject>

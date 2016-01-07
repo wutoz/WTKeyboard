@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		478805C91C3E5EA100CDEA51 /* WTKeyboardSearchPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 478805C81C3E5EA100CDEA51 /* WTKeyboardSearchPad.m */; };
 		D88452151C2F8BDC00CF2428 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D88452141C2F8BDC00CF2428 /* main.m */; };
 		D88452181C2F8BDC00CF2428 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88452171C2F8BDC00CF2428 /* AppDelegate.m */; };
 		D884521B1C2F8BDC00CF2428 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D884521A1C2F8BDC00CF2428 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		478805C71C3E5EA100CDEA51 /* WTKeyboardSearchPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKeyboardSearchPad.h; sourceTree = "<group>"; };
+		478805C81C3E5EA100CDEA51 /* WTKeyboardSearchPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKeyboardSearchPad.m; sourceTree = "<group>"; };
 		D88452101C2F8BDC00CF2428 /* WTKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88452141C2F8BDC00CF2428 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D88452161C2F8BDC00CF2428 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				D88452351C2F8BF200CF2428 /* WTKeyboardProtocol.h */,
 				D88452361C2F8BF200CF2428 /* WTKeyboardStockPad.h */,
 				D88452371C2F8BF200CF2428 /* WTKeyboardStockPad.m */,
+				478805C71C3E5EA100CDEA51 /* WTKeyboardSearchPad.h */,
+				478805C81C3E5EA100CDEA51 /* WTKeyboardSearchPad.m */,
 				D88452531C2F907700CF2428 /* WTKeyboardUtils.h */,
 				D88452541C2F907700CF2428 /* WTKeyboardUtils.m */,
 			);
@@ -226,6 +231,7 @@
 				D88452181C2F8BDC00CF2428 /* AppDelegate.m in Sources */,
 				D88452551C2F907700CF2428 /* WTKeyboardUtils.m in Sources */,
 				D88452481C2F8BF200CF2428 /* WTKeyboardStockPad.m in Sources */,
+				478805C91C3E5EA100CDEA51 /* WTKeyboardSearchPad.m in Sources */,
 				D88452461C2F8BF200CF2428 /* WTKeyboardDecimalPad.m in Sources */,
 				D88452151C2F8BDC00CF2428 /* main.m in Sources */,
 			);
@@ -374,6 +380,7 @@
 				D88452291C2F8BDC00CF2428 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
