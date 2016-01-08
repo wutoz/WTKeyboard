@@ -227,6 +227,8 @@
                             if([[textField delegate] textField:textField shouldChangeCharactersInRange:NSMakeRange(loc, 0) replacementString:character]){
                                 [self.textView insertText:character];
                             };
+                        }else{
+                            [self.textView insertText:character];
                         }
                     }
                 }
@@ -263,6 +265,8 @@
                             if([[textField delegate] textField:textField shouldChangeCharactersInRange:NSMakeRange(loc, 0) replacementString:@" "]){
                                 [self.textView insertText:@" "];
                             };
+                        }else{
+                            [self.textView insertText:@" "];
                         }
                     }
                 }
@@ -356,6 +360,8 @@
                 if([[textField delegate] textField:textField shouldChangeCharactersInRange:NSMakeRange(loc, len) replacementString:@""]){
                     [self.textView deleteBackward];
                 };
+            }else{
+                [self.textView deleteBackward];
             }
         }
     }else{
