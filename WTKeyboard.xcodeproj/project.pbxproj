@@ -171,8 +171,8 @@
 				D8C126E31C3EB11500E185C5 /* keyboard_W420H80.png */,
 				D8C126F51C3EE36500E185C5 /* keyboard_W520H80.png */,
 				D8C126DD1C3EA63E00E185C5 /* keyboard_search_background.png */,
-				D884523B1C2F8BF200CF2428 /* keyboard_stock_background.png */,
 				D884523C1C2F8BF200CF2428 /* keyboard_stock_cancel.png */,
+				D884523B1C2F8BF200CF2428 /* keyboard_stock_background.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

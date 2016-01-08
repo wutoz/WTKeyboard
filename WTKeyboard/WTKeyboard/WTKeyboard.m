@@ -227,6 +227,7 @@
                 case WTKeyFunctionNormal:
                 case WTKeyFunctionUpdate:
                 case WTKeyFunctionCancel:
+                case WTKeyFunctionClear:
                 case WTKeyFunctionCustom:
                     break;
             }
@@ -284,6 +285,11 @@
                         if([textField canResignFirstResponder]) [textField resignFirstResponder];
                     }
                 }
+                    break;
+                case WTKeyFunctionClear:
+                    while ([self.textView hasText]) {
+                        [self.textView deleteBackward];
+                    }
                     break;
                 case WTKeyFunctionCustom:
                 {

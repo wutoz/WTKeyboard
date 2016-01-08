@@ -31,7 +31,7 @@
 @synthesize characterKeys,functionKeys,crtButton;
 
 - (void)initPad{
-    NSMutableArray *keys = [kNums randomObjectEnumerator].allObjects.mutableCopy;
+    NSMutableArray *keys = [NSMutableArray arrayWithArray:kNums];
     [keys addObject:@"0"];
     [keys addObject:@"X"];
     [keys addObjectsFromArray:kFuncs];

@@ -35,6 +35,7 @@ typedef NS_ENUM(NSUInteger, WTKeyFunction) {
     WTKeyFunctionReturn,
     WTKeyFunctionUpdate,
     WTKeyFunctionCancel,
+    WTKeyFunctionClear,
     WTKeyFunctionCustom
 };
 
