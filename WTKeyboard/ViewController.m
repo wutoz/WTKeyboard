@@ -33,7 +33,8 @@
     self.textField6.WTKeyboardType = WTKeyboardTypeSearchPad;
     self.textField6.delegate = self;
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(receiveNoti:) name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNoti:) name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(customNoti:) name:WTKeyboardCustomKeyNotification object:nil];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -43,14 +44,17 @@
 }
 
 - (void)receiveNoti:(NSNotification *)noti{
-    UITextField *textField = noti.object;
-    if([textField.text hasSuffix:@"上证"]){
-        NSLog(@"上证");
-    }else if ([textField.text hasSuffix:@"深证"]){
-        NSLog(@"深证");
-    }else{
-        NSLog(@"改变");
+    if([noti.object isKindOfClass:[UITextField class]]){
+        UITextField *textField = noti.object;
+        NSLog(@"%@",textField.text);
+    }else if ([noti.object isKindOfClass:[UITextView class]]){
+        UITextView *textView = noti.object;
+        NSLog(@"%@",textView.text);
     }
+}
+
+- (void)customNoti:(NSNotification *)noti{
+    NSLog(@"%@",noti.object);
 }
 
 - (void)didReceiveMemoryWarning {

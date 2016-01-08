@@ -24,6 +24,8 @@
 #import "WTKeyboardUtils.h"
 #import <objc/runtime.h>
 
+NSString * const WTKeyboardCustomKeyNotification = @"WTKeyboardCustomKeyNotification";
+
 static NSString *WTKeyboardAccosiationKey = @"WTKeyboardAccosiationKey";
 
 @implementation WTKeyboardUtils

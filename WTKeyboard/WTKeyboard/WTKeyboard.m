@@ -287,12 +287,7 @@
                     break;
                 case WTKeyFunctionCustom:
                 {
-                    [self.textView insertText:b.titleLabel.text];
-                    
-//                    if ([self.textView isKindOfClass:[UITextView class]])
-//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
-//                    else if ([self.textView isKindOfClass:[UITextField class]])
-//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
+                    [[NSNotificationCenter defaultCenter]postNotificationName:WTKeyboardCustomKeyNotification object:b.titleLabel.text];
                 }
                     break;
             }

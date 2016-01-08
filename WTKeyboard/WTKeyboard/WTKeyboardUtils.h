@@ -26,6 +26,8 @@
 #import "WTKeyboard.h"
 #import "WTKeyboardProtocol.h"
 
+extern NSString * const WTKeyboardCustomKeyNotification;
+
 @interface WTKeyboardUtils : NSObject
 
 @end
