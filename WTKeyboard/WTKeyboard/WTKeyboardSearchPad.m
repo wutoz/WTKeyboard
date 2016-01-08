@@ -202,7 +202,7 @@
         return WTKeyFunctionCancel;
     }else if ([b.titleLabel.text isEqualToString:@"退格"]){
         return WTKeyFunctionDelete;
-    }else if ([b.titleLabel.text isEqualToString:@"搜素"]){
+    }else if ([b.titleLabel.text isEqualToString:@"搜索"]){
         return WTKeyFunctionReturn;
     }else if ([b.titleLabel.text isEqualToString:@"   "]){
         return WTKeyFunctionInsert;

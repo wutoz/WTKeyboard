@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "WTKeyboardUtils.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField1;
 @property (weak, nonatomic) IBOutlet UITextField *textField2;
 @property (weak, nonatomic) IBOutlet UITextField *textField3;
@@ -31,9 +31,15 @@
     self.textField4.WTKeyboardType = WTKeyboardTypeStockPad;
     self.textField5.WTKeyboardType = WTKeyboardTypeCharPad;
     self.textField6.WTKeyboardType = WTKeyboardTypeSearchPad;
+    self.textField6.delegate = self;
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(receiveNoti:) name:UITextFieldTextDidChangeNotification object:nil];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    NSLog(@"返回");
+    return YES;
 }
 
 - (void)receiveNoti:(NSNotification *)noti{
@@ -43,7 +49,7 @@
     }else if ([textField.text hasSuffix:@"深证"]){
         NSLog(@"深证");
     }else{
-        NSLog(@"receiveNoti");
+        NSLog(@"改变");
     }
 }
 
