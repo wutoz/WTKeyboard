@@ -31,9 +31,8 @@
     self.textField4.WTKeyboardType = WTKeyboardTypeStockPad;
     self.textField5.WTKeyboardType = WTKeyboardTypeCharPad;
     self.textField6.WTKeyboardType = WTKeyboardTypeSearchPad;
-    self.textField6.delegate = self;
+    self.textField7.delegate = self;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNoti:) name:UITextFieldTextDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(customNoti:) name:WTKeyboardCustomKeyNotification object:nil];
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -43,14 +42,9 @@
     return YES;
 }
 
-- (void)receiveNoti:(NSNotification *)noti{
-    if([noti.object isKindOfClass:[UITextField class]]){
-        UITextField *textField = noti.object;
-        NSLog(@"%@",textField.text);
-    }else if ([noti.object isKindOfClass:[UITextView class]]){
-        UITextView *textView = noti.object;
-        NSLog(@"%@",textView.text);
-    }
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    NSLog(@"改变");
+    return YES;
 }
 
 - (void)customNoti:(NSNotification *)noti{

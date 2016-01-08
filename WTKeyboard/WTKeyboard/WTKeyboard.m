@@ -214,12 +214,22 @@
                 case WTKeyFunctionInsert:
                 {
                     NSString *character = [NSString stringWithString:b.titleLabel.text];
-                    [self.textView insertText:character];
-                    
-//                    if ([self.textView isKindOfClass:[UITextView class]])
+
+                    if ([self.textView isKindOfClass:[UITextView class]]){
 //                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
-//                    else if ([self.textView isKindOfClass:[UITextField class]])
-//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
+                        [self.textView insertText:character];
+                    }
+                    else if ([self.textView isKindOfClass:[UITextField class]]){
+                        UITextField *textField = (UITextField *)self.textView;
+                        NSUInteger len = b.titleLabel.text.length;
+                        NSUInteger loc = textField.text.length;
+                        
+                        if([[textField delegate] respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]){
+                            if([[textField delegate] textField:textField shouldChangeCharactersInRange:NSMakeRange(loc, len) replacementString:character]){
+                                [self.textView insertText:character];
+                            };
+                        }
+                    }
                 }
                     break;
                 case WTKeyFunctionDelete:
@@ -242,12 +252,21 @@
             switch ([_keyboard touchFunctionEnd:b]) {
                 case WTKeyFunctionInsert:
                 {
-                    [self.textView insertText:@" "];
-                    
-//                    if ([self.textView isKindOfClass:[UITextView class]])
+                    if ([self.textView isKindOfClass:[UITextView class]]){
 //                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
-//                    else if ([self.textView isKindOfClass:[UITextField class]])
-//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
+                        [self.textView insertText:@" "];
+                    }
+                    else if ([self.textView isKindOfClass:[UITextField class]]){
+                        UITextField *textField = (UITextField *)self.textView;
+                        NSUInteger len = 1;
+                        NSUInteger loc = textField.text.length;
+                        
+                        if([[textField delegate] respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]){
+                            if([[textField delegate] textField:textField shouldChangeCharactersInRange:NSMakeRange(loc, len) replacementString:@" "]){
+                                [self.textView insertText:@" "];
+                            };
+                        }
+                    }
                 }
                     break;
                 case WTKeyFunctionReturn:
@@ -326,12 +345,21 @@
 
 - (void)deleteBackward{
     if([self.textView hasText]){
-        [self.textView deleteBackward];
-        
-//        if ([self.textView isKindOfClass:[UITextView class]])
-//            [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
-//        else if ([self.textView isKindOfClass:[UITextField class]])
-//            [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
+        if ([self.textView isKindOfClass:[UITextView class]]){
+//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
+            [self.textView deleteBackward];
+        }
+        else if ([self.textView isKindOfClass:[UITextField class]]){
+            UITextField *textField = (UITextField *)self.textView;
+            NSUInteger len = 1;
+            NSUInteger loc = textField.text.length - 1;
+            
+            if([[textField delegate] respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]){
+                if([[textField delegate] textField:textField shouldChangeCharactersInRange:NSMakeRange(loc, len) replacementString:@""]){
+                    [self.textView deleteBackward];
+                };
+            }
+        }
     }else{
         [self endTouchTime];
     }
