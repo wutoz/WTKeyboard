@@ -221,11 +221,10 @@
                     }
                     else if ([self.textView isKindOfClass:[UITextField class]]){
                         UITextField *textField = (UITextField *)self.textView;
-                        NSUInteger len = b.titleLabel.text.length;
                         NSUInteger loc = textField.text.length;
                         
                         if([[textField delegate] respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]){
-                            if([[textField delegate] textField:textField shouldChangeCharactersInRange:NSMakeRange(loc, len) replacementString:character]){
+                            if([[textField delegate] textField:textField shouldChangeCharactersInRange:NSMakeRange(loc, 0) replacementString:character]){
                                 [self.textView insertText:character];
                             };
                         }
@@ -258,11 +257,10 @@
                     }
                     else if ([self.textView isKindOfClass:[UITextField class]]){
                         UITextField *textField = (UITextField *)self.textView;
-                        NSUInteger len = 1;
                         NSUInteger loc = textField.text.length;
                         
                         if([[textField delegate] respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]){
-                            if([[textField delegate] textField:textField shouldChangeCharactersInRange:NSMakeRange(loc, len) replacementString:@" "]){
+                            if([[textField delegate] textField:textField shouldChangeCharactersInRange:NSMakeRange(loc, 0) replacementString:@" "]){
                                 [self.textView insertText:@" "];
                             };
                         }
