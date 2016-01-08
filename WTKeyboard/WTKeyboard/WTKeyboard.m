@@ -216,10 +216,10 @@
                     NSString *character = [NSString stringWithString:b.titleLabel.text];
                     [self.textView insertText:character];
                     
-                    if ([self.textView isKindOfClass:[UITextView class]])
-                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
-                    else if ([self.textView isKindOfClass:[UITextField class]])
-                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
+//                    if ([self.textView isKindOfClass:[UITextView class]])
+//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
+//                    else if ([self.textView isKindOfClass:[UITextField class]])
+//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
                 }
                     break;
                 case WTKeyFunctionDelete:
@@ -227,6 +227,7 @@
                 case WTKeyFunctionNormal:
                 case WTKeyFunctionUpdate:
                 case WTKeyFunctionCancel:
+                case WTKeyFunctionCustom:
                     break;
             }
             break;
@@ -242,10 +243,10 @@
                 {
                     [self.textView insertText:@" "];
                     
-                    if ([self.textView isKindOfClass:[UITextView class]])
-                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
-                    else if ([self.textView isKindOfClass:[UITextField class]])
-                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
+//                    if ([self.textView isKindOfClass:[UITextView class]])
+//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
+//                    else if ([self.textView isKindOfClass:[UITextField class]])
+//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
                 }
                     break;
                 case WTKeyFunctionReturn:
@@ -253,7 +254,7 @@
                     if ([self.textView isKindOfClass:[UITextView class]])
                     {
                         [self.textView insertText:@"\n"];
-                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
+//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
                     }
                     else if ([self.textView isKindOfClass:[UITextField class]])
                     {
@@ -282,6 +283,16 @@
                         UITextField *textField = (UITextField *)self.textView;
                         if([textField canResignFirstResponder]) [textField resignFirstResponder];
                     }
+                }
+                    break;
+                case WTKeyFunctionCustom:
+                {
+                    [self.textView insertText:b.titleLabel.text];
+                    
+//                    if ([self.textView isKindOfClass:[UITextView class]])
+//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
+//                    else if ([self.textView isKindOfClass:[UITextField class]])
+//                        [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
                 }
                     break;
             }
@@ -316,10 +327,10 @@
     if([self.textView hasText]){
         [self.textView deleteBackward];
         
-        if ([self.textView isKindOfClass:[UITextView class]])
-            [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
-        else if ([self.textView isKindOfClass:[UITextField class]])
-            [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
+//        if ([self.textView isKindOfClass:[UITextView class]])
+//            [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self.textView];
+//        else if ([self.textView isKindOfClass:[UITextField class]])
+//            [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self.textView];
     }else{
         [self endTouchTime];
     }

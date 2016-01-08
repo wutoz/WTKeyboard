@@ -31,7 +31,20 @@
     self.textField4.WTKeyboardType = WTKeyboardTypeStockPad;
     self.textField5.WTKeyboardType = WTKeyboardTypeCharPad;
     self.textField6.WTKeyboardType = WTKeyboardTypeSearchPad;
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(receiveNoti:) name:UITextFieldTextDidChangeNotification object:nil];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)receiveNoti:(NSNotification *)noti{
+    UITextField *textField = noti.object;
+    if([textField.text hasSuffix:@"上证"]){
+        NSLog(@"上证");
+    }else if ([textField.text hasSuffix:@"深证"]){
+        NSLog(@"深证");
+    }else{
+        NSLog(@"receiveNoti");
+    }
 }
 
 - (void)didReceiveMemoryWarning {

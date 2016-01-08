@@ -32,9 +32,6 @@
 		D8C126E71C3EB11500E185C5 /* keyboard_W260H72.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126E21C3EB11500E185C5 /* keyboard_W260H72.png */; };
 		D8C126E81C3EB11500E185C5 /* keyboard_W420H80.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126E31C3EB11500E185C5 /* keyboard_W420H80.png */; };
 		D8C126EA1C3EC7BE00E185C5 /* keyboard_W56H82.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126E91C3EC7BE00E185C5 /* keyboard_W56H82.png */; };
-		D8C126EE1C3EC81700E185C5 /* ZoomKeyL.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126EB1C3EC81700E185C5 /* ZoomKeyL.png */; };
-		D8C126EF1C3EC81700E185C5 /* ZoomKeyM.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126EC1C3EC81700E185C5 /* ZoomKeyM.png */; };
-		D8C126F01C3EC81700E185C5 /* ZoomKeyR.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126ED1C3EC81700E185C5 /* ZoomKeyR.png */; };
 		D8C126F61C3EE36500E185C5 /* keyboard_W520H80.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126F51C3EE36500E185C5 /* keyboard_W520H80.png */; };
 		D8C126F81C3EE43200E185C5 /* keyboard_W96H82.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126F71C3EE43200E185C5 /* keyboard_W96H82.png */; };
 /* End PBXBuildFile section */
@@ -78,9 +75,6 @@
 		D8C126E21C3EB11500E185C5 /* keyboard_W260H72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_W260H72.png; sourceTree = "<group>"; };
 		D8C126E31C3EB11500E185C5 /* keyboard_W420H80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_W420H80.png; sourceTree = "<group>"; };
 		D8C126E91C3EC7BE00E185C5 /* keyboard_W56H82.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_W56H82.png; sourceTree = "<group>"; };
-		D8C126EB1C3EC81700E185C5 /* ZoomKeyL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZoomKeyL.png; sourceTree = "<group>"; };
-		D8C126EC1C3EC81700E185C5 /* ZoomKeyM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZoomKeyM.png; sourceTree = "<group>"; };
-		D8C126ED1C3EC81700E185C5 /* ZoomKeyR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZoomKeyR.png; sourceTree = "<group>"; };
 		D8C126F51C3EE36500E185C5 /* keyboard_W520H80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_W520H80.png; sourceTree = "<group>"; };
 		D8C126F71C3EE43200E185C5 /* keyboard_W96H82.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_W96H82.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,9 +162,6 @@
 		D884523A1C2F8BF200CF2428 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D8C126EB1C3EC81700E185C5 /* ZoomKeyL.png */,
-				D8C126EC1C3EC81700E185C5 /* ZoomKeyM.png */,
-				D8C126ED1C3EC81700E185C5 /* ZoomKeyR.png */,
 				D8C126E91C3EC7BE00E185C5 /* keyboard_W56H82.png */,
 				D8C126F71C3EE43200E185C5 /* keyboard_W96H82.png */,
 				D8C126DF1C3EB11500E185C5 /* keyboard_W110H96.png */,
@@ -243,7 +234,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C126EF1C3EC81700E185C5 /* ZoomKeyM.png in Resources */,
 				D8C126E61C3EB11500E185C5 /* keyboard_W184H72.png in Resources */,
 				D8C126E51C3EB11500E185C5 /* keyboard_W170H96.png in Resources */,
 				D88452231C2F8BDC00CF2428 /* LaunchScreen.storyboard in Resources */,
@@ -259,8 +249,6 @@
 				D8C126E41C3EB11500E185C5 /* keyboard_W110H96.png in Resources */,
 				D8C126F81C3EE43200E185C5 /* keyboard_W96H82.png in Resources */,
 				D8C126E71C3EB11500E185C5 /* keyboard_W260H72.png in Resources */,
-				D8C126EE1C3EC81700E185C5 /* ZoomKeyL.png in Resources */,
-				D8C126F01C3EC81700E185C5 /* ZoomKeyR.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

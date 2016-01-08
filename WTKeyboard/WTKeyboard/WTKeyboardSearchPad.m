@@ -109,7 +109,7 @@
         UIButton *btn = [[UIButton alloc]init];
         [btn setUserInteractionEnabled:NO];
         [btn setHidden:YES];
-        [btn.titleLabel setFont:[UIFont boldSystemFontOfSize:17]];
+        [btn.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
         [btn setTitle:obj forState:UIControlStateNormal];
         [btn setTitle:obj forState:UIControlStateSelected];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -206,6 +206,8 @@
         return WTKeyFunctionReturn;
     }else if ([b.titleLabel.text isEqualToString:@"   "]){
         return WTKeyFunctionInsert;
+    }else if ([b.titleLabel.text isEqualToString:@"上证"] || [b.titleLabel.text isEqualToString:@"深证"]){
+        return WTKeyFunctionCustom;
     }else if ([b.titleLabel.text isEqualToString:@"ABC"] || [b.titleLabel.text isEqualToString:@"123"]){
         [self.characterKeys enumerateObjectsUsingBlock:^(UIButton *btn, NSUInteger idx, BOOL * _Nonnull stop) {
             btn.hidden = !btn.hidden;
