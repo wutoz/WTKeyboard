@@ -38,6 +38,7 @@
 @interface WTKeyboard ()
 
 @property (nonatomic, strong) id<WTKeyboardProtocol> keyboard;
+@property (nonatomic, strong) UIImageView *keyboardBackground;
 @property (nonatomic, strong) NSTimer *touchTime;
 
 @end

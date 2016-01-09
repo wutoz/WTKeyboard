@@ -35,8 +35,8 @@
     [keys addObject:@"."];
     [keys addObjectsFromArray:kFuncs];
     
-    NSMutableArray * __block btns = [NSMutableArray array];
-    NSMutableArray * __block funcBtns = [NSMutableArray array];
+    NSMutableArray *btns = [NSMutableArray array];
+    NSMutableArray *funcBtns = [NSMutableArray array];
     
     [keys enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         int asciiCode = [obj characterAtIndex:0];

@@ -25,13 +25,19 @@
 #import "WTKeyboardProtocol.h"
 
 @interface WTKeyboard : UIView<UIInputViewAudioFeedback>
-
+/*!
+ *  默认初始化方式
+ *
+ *  @return WTKeyboard实例
+ */
 - (instancetype)init;
-
+/*!
+ *  键盘类型
+ */
 @property (nonatomic, assign) WTKeyboardType keyboardtype;
-
+/*!
+ *  输入框
+ */
 @property (nonatomic, weak) id<UITextInput> textView;
-
-@property (nonatomic, strong) UIImageView *keyboardBackground;
 
 @end

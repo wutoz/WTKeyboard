@@ -71,8 +71,8 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
 }
 
 - (void)createPadWithType:(WTKeyboardCharState)state{
-    NSMutableArray * __block btns = [NSMutableArray array];
-    NSMutableArray * __block funcbtns = [NSMutableArray array];
+    NSMutableArray *btns = [NSMutableArray array];
+    NSMutableArray *funcbtns = [NSMutableArray array];
     
     //两种布局都生成
     //第一页字母

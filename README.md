@@ -7,7 +7,7 @@ WTKeyboard 键盘组件
 ## 安装
 
 ### 源文件
-
+拷贝 `WTKeyboard/`目录下所有文件即可
 
 ### CocoaPods
 
@@ -38,7 +38,25 @@ WTKeyboard 键盘组件
     self.textField3.WTKeyboardType = WTKeyboardTypeCardPad;
     self.textField4.WTKeyboardType = WTKeyboardTypeStockPad;
     self.textField5.WTKeyboardType = WTKeyboardTypeCharPad;
+    self.textField6.WTKeyboardType = WTKeyboardTypeSearchPad;
+    self.textField6.delegate = self;
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(customNoti:) name:WTKeyboardCustomKeyNotification object:nil];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    NSLog(@"返回");
+    return YES;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    NSLog(@"改变");
+    return YES;
+}
+
+- (void)customNoti:(NSNotification *)noti{
+    NSLog(@"%@",noti.object);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,3 +69,7 @@ WTKeyboard 键盘组件
 ```
 ## 支持系统
 - iOS 7+
+
+## TODO
+- Rotation
+- UIButton -> drawRect

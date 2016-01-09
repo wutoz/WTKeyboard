@@ -145,17 +145,17 @@
 				D884523A1C2F8BF200CF2428 /* Resources */,
 				D884522B1C2F8BF200CF2428 /* WTKeyboard.h */,
 				D884522C1C2F8BF200CF2428 /* WTKeyboard.m */,
+				D88452351C2F8BF200CF2428 /* WTKeyboardProtocol.h */,
 				D884522D1C2F8BF200CF2428 /* WTKeyboardCardPad.h */,
 				D884522E1C2F8BF200CF2428 /* WTKeyboardCardPad.m */,
-				D884522F1C2F8BF200CF2428 /* WTKeyboardCharPad.h */,
-				D88452301C2F8BF200CF2428 /* WTKeyboardCharPad.m */,
-				D88452311C2F8BF200CF2428 /* WTKeyboardDecimalPad.h */,
-				D88452321C2F8BF200CF2428 /* WTKeyboardDecimalPad.m */,
 				D88452331C2F8BF200CF2428 /* WTKeyboardNumPad.h */,
 				D88452341C2F8BF200CF2428 /* WTKeyboardNumPad.m */,
-				D88452351C2F8BF200CF2428 /* WTKeyboardProtocol.h */,
 				D88452361C2F8BF200CF2428 /* WTKeyboardStockPad.h */,
 				D88452371C2F8BF200CF2428 /* WTKeyboardStockPad.m */,
+				D88452311C2F8BF200CF2428 /* WTKeyboardDecimalPad.h */,
+				D88452321C2F8BF200CF2428 /* WTKeyboardDecimalPad.m */,
+				D884522F1C2F8BF200CF2428 /* WTKeyboardCharPad.h */,
+				D88452301C2F8BF200CF2428 /* WTKeyboardCharPad.m */,
 				478805C71C3E5EA100CDEA51 /* WTKeyboardSearchPad.h */,
 				478805C81C3E5EA100CDEA51 /* WTKeyboardSearchPad.m */,
 				D88452531C2F907700CF2428 /* WTKeyboardUtils.h */,
@@ -386,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WTKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wutongr.WTKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -397,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WTKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wutongr.WTKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";

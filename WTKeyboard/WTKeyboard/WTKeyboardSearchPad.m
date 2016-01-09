@@ -47,8 +47,8 @@
 @synthesize characterKeys,functionKeys,crtButton;
 
 - (void)initPad{
-    NSMutableArray * __block btns = [NSMutableArray array];
-    NSMutableArray * __block funcbtns = [NSMutableArray array];
+    NSMutableArray *btns = [NSMutableArray array];
+    NSMutableArray *funcbtns = [NSMutableArray array];
     
     //两种布局都生成
     //第一页数字
