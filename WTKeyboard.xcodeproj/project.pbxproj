@@ -25,6 +25,7 @@
 		D88452501C2F8C0100CF2428 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D884524F1C2F8C0100CF2428 /* QuartzCore.framework */; };
 		D88452521C2F8C6600CF2428 /* WTKeyboard.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D88452511C2F8C6600CF2428 /* WTKeyboard.podspec */; };
 		D88452551C2F907700CF2428 /* WTKeyboardUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D88452541C2F907700CF2428 /* WTKeyboardUtils.m */; };
+		D89FD49E1C409AEB002B6792 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89FD49D1C409AEB002B6792 /* TableViewController.m */; };
 		D8C126DE1C3EA63E00E185C5 /* keyboard_search_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126DD1C3EA63E00E185C5 /* keyboard_search_background.png */; };
 		D8C126E41C3EB11500E185C5 /* keyboard_W110H96.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126DF1C3EB11500E185C5 /* keyboard_W110H96.png */; };
 		D8C126E51C3EB11500E185C5 /* keyboard_W170H96.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126E01C3EB11500E185C5 /* keyboard_W170H96.png */; };
@@ -68,6 +69,8 @@
 		D88452511C2F8C6600CF2428 /* WTKeyboard.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WTKeyboard.podspec; sourceTree = "<group>"; };
 		D88452531C2F907700CF2428 /* WTKeyboardUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKeyboardUtils.h; sourceTree = "<group>"; };
 		D88452541C2F907700CF2428 /* WTKeyboardUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKeyboardUtils.m; sourceTree = "<group>"; };
+		D89FD49C1C409AEB002B6792 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		D89FD49D1C409AEB002B6792 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		D8C126DD1C3EA63E00E185C5 /* keyboard_search_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_search_background.png; sourceTree = "<group>"; };
 		D8C126DF1C3EB11500E185C5 /* keyboard_W110H96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_W110H96.png; sourceTree = "<group>"; };
 		D8C126E01C3EB11500E185C5 /* keyboard_W170H96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_W170H96.png; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				D884522A1C2F8BF200CF2428 /* WTKeyboard */,
 				D88452161C2F8BDC00CF2428 /* AppDelegate.h */,
 				D88452171C2F8BDC00CF2428 /* AppDelegate.m */,
+				D89FD49C1C409AEB002B6792 /* TableViewController.h */,
+				D89FD49D1C409AEB002B6792 /* TableViewController.m */,
 				D88452191C2F8BDC00CF2428 /* ViewController.h */,
 				D884521A1C2F8BDC00CF2428 /* ViewController.m */,
 				D884521C1C2F8BDC00CF2428 /* Main.storyboard */,
@@ -266,6 +271,7 @@
 				D88452471C2F8BF200CF2428 /* WTKeyboardNumPad.m in Sources */,
 				D88452181C2F8BDC00CF2428 /* AppDelegate.m in Sources */,
 				D88452551C2F907700CF2428 /* WTKeyboardUtils.m in Sources */,
+				D89FD49E1C409AEB002B6792 /* TableViewController.m in Sources */,
 				D88452481C2F8BF200CF2428 /* WTKeyboardStockPad.m in Sources */,
 				478805C91C3E5EA100CDEA51 /* WTKeyboardSearchPad.m in Sources */,
 				D88452461C2F8BF200CF2428 /* WTKeyboardDecimalPad.m in Sources */,

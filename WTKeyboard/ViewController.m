@@ -25,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"键盘";
+    
     self.textField1.WTKeyboardType = WTKeyboardTypeNumPad;
     self.textField2.WTKeyboardType = WTKeyboardTypeDecimalPad;
     self.textField3.WTKeyboardType = WTKeyboardTypeCardPad;
