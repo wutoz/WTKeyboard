@@ -72,7 +72,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
 
 - (void)createPadWithType:(WTKeyboardCharState)state{
     NSMutableArray *btns = [NSMutableArray array];
-    NSMutableArray *funcbtns = [NSMutableArray array];
+    NSMutableArray *funcBtns = [NSMutableArray array];
     
     //两种布局都生成
     //第一页字母
@@ -140,38 +140,38 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
     [shiftbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [shiftbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [shiftbt setTitle:@"⬆︎" forState:UIControlStateNormal];
-    [funcbtns addObject:shiftbt];
+    [funcBtns addObject:shiftbt];
     //2.delete
     UIButton *deletebt = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width - 5 - (SCREEN_SIZE.width - 60) / 9 - 10, (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9 + 10, 44)];
     [deletebt setUserInteractionEnabled:NO];
     [deletebt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [deletebt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [deletebt setTitle:@"退格" forState:UIControlStateNormal];
-    [funcbtns addObject:deletebt];
+    [funcBtns addObject:deletebt];
     //3.#+123
     UIButton *ABCbt = [[UIButton alloc]initWithFrame:CGRectMake(5, (44 + 8) * 3 + 10, 75, 44)];
     [ABCbt setUserInteractionEnabled:NO];
     [ABCbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [ABCbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [ABCbt setTitle:@"#+123" forState:UIControlStateNormal];
-    [funcbtns addObject:ABCbt];
+    [funcBtns addObject:ABCbt];
     //4.空格
     UIButton *blankbt = [[UIButton alloc]initWithFrame:CGRectMake(5 + 80, (44 + 8) * 3 + 10, SCREEN_SIZE.width - 160 - 10, 44)];
     [blankbt setUserInteractionEnabled:NO];
     [blankbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [blankbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [blankbt setTitle:@"空 格" forState:UIControlStateNormal];
-    [funcbtns addObject:blankbt];
+    [funcBtns addObject:blankbt];
     //5.完成
     UIButton *OKbt = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width - 5 - 75, (44 + 8) * 3 + 10, 75, 44)];
     [OKbt setUserInteractionEnabled:NO];
     [OKbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [OKbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [OKbt setTitle:@"完 成" forState:UIControlStateNormal];
-    [funcbtns addObject:OKbt];
+    [funcBtns addObject:OKbt];
     
     self.characterKeys = btns;
-    self.functionKeys = funcbtns;
+    self.functionKeys = funcBtns;
 }
 
 - (void)refrashPad:(WTKeyboardCharState)state{

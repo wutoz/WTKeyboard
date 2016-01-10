@@ -48,7 +48,7 @@
 
 - (void)initPad{
     NSMutableArray *btns = [NSMutableArray array];
-    NSMutableArray *funcbtns = [NSMutableArray array];
+    NSMutableArray *funcBtns = [NSMutableArray array];
     
     //两种布局都生成
     //第一页数字
@@ -83,7 +83,7 @@
         [btn.titleLabel setFont:[UIFont boldSystemFontOfSize:17]];
         [btn setTitle:obj forState:UIControlStateNormal];
         [btn setTitle:obj forState:UIControlStateSelected];
-        [funcbtns addObject:btn];
+        [funcBtns addObject:btn];
         if(idx <= 2){
             [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
@@ -133,7 +133,7 @@
         [btn.titleLabel setFont:[UIFont boldSystemFontOfSize:17]];
         [btn setTitle:obj forState:UIControlStateNormal];
         [btn setTitle:obj forState:UIControlStateSelected];
-        [funcbtns addObject:btn];
+        [funcBtns addObject:btn];
         if(idx == 0){
             [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
@@ -170,7 +170,7 @@
     
     
     self.characterKeys = btns;
-    self.functionKeys = funcbtns;
+    self.functionKeys = funcBtns;
 }
 
 - (void)touchBegin:(UIButton *)b type:(WTKeyboardButtonType)type{
