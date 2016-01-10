@@ -45,14 +45,13 @@
         [btn setTitle:obj forState:UIControlStateSelected];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
+        [btn setBackgroundImage:[UIImage imageWithHexString:@"d2d5db"] forState:UIControlStateSelected];
         
         if(asciiCode >= 49 && asciiCode <= 57){
             [btn setFrame:CGRectMake(idx % 3 * (SCREEN_SIZE.width / 4), idx / 3 * (KEYBOARD_HEIGHT / 4), SCREEN_SIZE.width / 4 - 0.5, KEYBOARD_HEIGHT / 4 - 0.5)];
-            [btn setBackgroundImage:[UIImage imageWithHexString:@"d2d5db"] forState:UIControlStateSelected];
             [btns addObject:btn];
         }else if (asciiCode == 48){
             [btn setFrame:CGRectMake(SCREEN_SIZE.width / 4, KEYBOARD_HEIGHT / 4 * 3, SCREEN_SIZE.width / 4 - 0.5, KEYBOARD_HEIGHT / 4 - 0.5)];
-            [btn setBackgroundImage:[UIImage imageWithHexString:@"d2d5db"] forState:UIControlStateSelected];
             [btns addObject:btn];
         }else{
             if([obj isEqualToString:@"取消"]){
@@ -67,7 +66,6 @@
                 [btn setBackgroundImage:[UIImage imageWithHexString:@"5aafe3"] forState:UIControlStateNormal];
             }
             [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
             [funcBtns addObject:btn];
         }
     }];

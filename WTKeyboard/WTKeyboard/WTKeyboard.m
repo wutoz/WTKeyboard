@@ -48,7 +48,6 @@
 #pragma mark -
 - (instancetype)init{
     if(self = [super init]){
-        self.frame = CGRectMake(0, 0, SCREEN_SIZE.width, KEYBOARD_HEIGHT);
         [self setUp];
     }
     return self;
@@ -70,25 +69,22 @@
 
 #pragma mark -
 - (void)setUp{
+    self.frame = CGRectMake(0, 0, SCREEN_SIZE.width, KEYBOARD_HEIGHT);
+    if(!_keyboardtype) [self setKeyboardtype:WTKeyboardTypeNumPad];
     //初始
-    if(!_keyboardtype){
-        _keyboardtype = WTKeyboardTypeNumPad;
-        _keyboard = [[WTKeyboardNumPad alloc]init];
-    }
+    [_keyboard initPad];
     //清空
-    for(UIView *view in self.subviews) [view removeFromSuperview];
+    [self.subviews enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL *stop) {
+        [obj removeFromSuperview];
+    }];
     //构造
     [self addSubview:self.keyboardBackground];
-    
-    [_keyboard initPad];
-    
-    for(UIView *key in _keyboard.characterKeys){
-        [self addSubview:key];
-    }
-    
-    for(UIView *key in _keyboard.functionKeys){
-        [self addSubview:key];
-    }
+    [_keyboard.characterKeys enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [self addSubview:obj];
+    }];
+    [_keyboard.functionKeys enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [self addSubview:obj];
+    }];
 }
 
 - (BOOL)enableInputClicksWhenVisible{
@@ -126,7 +122,6 @@
                 self.keyboardBackground.image = searchBgImage;
                 _keyboard = [[WTKeyboardSearchPad alloc]init];
                 break;
-                
         }
         [self setUp];
     }
