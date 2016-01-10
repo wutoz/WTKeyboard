@@ -260,6 +260,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
     if ([b subviews].count > 1) {
         [[[b subviews] objectAtIndex:1] removeFromSuperview];
     }
+    if(!b.titleLabel.text) return WTKeyFunctionCustom;
     return WTKeyFunctionInsert;
 }
 

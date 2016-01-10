@@ -100,6 +100,7 @@
 
 - (WTKeyFunction)touchEnd:(UIButton *)b{
     b.selected = NO;
+    if(!b.titleLabel.text) return WTKeyFunctionCustom;
     return WTKeyFunctionInsert;
 }
 
