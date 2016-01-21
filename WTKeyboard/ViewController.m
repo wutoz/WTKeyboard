@@ -50,7 +50,7 @@
 }
 
 - (void)customNoti:(NSNotification *)noti{
-    NSLog(@"%@",noti.object);
+    NSLog(@"%@",noti.object); 
 }
 
 - (void)didReceiveMemoryWarning {
