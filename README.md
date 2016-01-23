@@ -72,4 +72,3 @@ WTKeyboard 键盘组件
 
 ## TODO
 - Rotation
-- UIButton -> drawRect
