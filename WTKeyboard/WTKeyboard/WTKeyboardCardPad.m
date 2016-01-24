@@ -42,7 +42,7 @@
     
     [keys enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         int asciiCode = [obj characterAtIndex:0];
-        UIButton *btn = [[UIButton alloc]init];
+        WTKeyboardButton *btn = [[WTKeyboardButton alloc]init];
         [btn setUserInteractionEnabled:NO];
         [btn setTitle:obj forState:UIControlStateNormal];
         [btn setTitle:obj forState:UIControlStateSelected];
@@ -81,12 +81,12 @@
     self.functionKeys = funcBtns;
 }
 
-- (void)touchBegin:(UIButton *)b type:(WTKeyboardButtonType)type{
+- (void)touchBegin:(WTKeyboardButton *)b type:(WTKeyboardButtonType)type{
     b.selected = YES;
     self.crtButton = b;
 }
 
-- (void)touchMove:(UIButton *)b type:(WTKeyboardButtonType)type{
+- (void)touchMove:(WTKeyboardButton *)b type:(WTKeyboardButtonType)type{
     b.selected = YES;
     if(self.crtButton != b){
         self.crtButton.selected = NO;
@@ -95,17 +95,17 @@
 }
 
 - (void)touchEnd{
-    for(UIButton *btn in self.characterKeys) btn.selected = NO;
-    for(UIButton *btn in self.functionKeys) btn.selected = NO;
+    for(WTKeyboardButton *btn in self.characterKeys) btn.selected = NO;
+    for(WTKeyboardButton *btn in self.functionKeys) btn.selected = NO;
 }
 
-- (WTKeyFunction)touchEnd:(UIButton *)b{
+- (WTKeyFunction)touchEnd:(WTKeyboardButton *)b{
     b.selected = NO;
     if(!b.titleLabel.text) return WTKeyFunctionCustom;
     return WTKeyFunctionInsert;
 }
 
-- (WTKeyFunction)touchFunctionEnd:(UIButton *)b{
+- (WTKeyFunction)touchFunctionEnd:(WTKeyboardButton *)b{
     b.selected = NO;
     if([b.titleLabel.text isEqualToString:@"取消"]){
         return WTKeyFunctionCancel;

@@ -55,7 +55,7 @@
     //第一页数字
     [kNums enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         int asciiCode = [obj characterAtIndex:0];
-        UIButton *btn = [[UIButton alloc]init];
+        WTKeyboardButton *btn = [[WTKeyboardButton alloc]init];
         [btn setUserInteractionEnabled:NO];
 //        [btn setHidden:YES];
         [btn.titleLabel setFont:[UIFont boldSystemFontOfSize:17]];
@@ -78,7 +78,7 @@
     }];
     
     [kFuncs1 enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIButton *btn = [[UIButton alloc]init];
+        WTKeyboardButton *btn = [[WTKeyboardButton alloc]init];
         [btn setUserInteractionEnabled:NO];
 //        [btn setHidden:YES];
         [btn.titleLabel setFont:[UIFont boldSystemFontOfSize:17]];
@@ -107,7 +107,7 @@
     }];
     //第二页字母(隐藏)
     [kChars enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIButton *btn = [[UIButton alloc]init];
+        WTKeyboardButton *btn = [[WTKeyboardButton alloc]init];
         [btn setUserInteractionEnabled:NO];
         [btn setHidden:YES];
         [btn.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
@@ -128,7 +128,7 @@
     }];
     
     [kFuncs2 enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIButton *btn = [[UIButton alloc]init];
+        WTKeyboardButton *btn = [[WTKeyboardButton alloc]init];
         [btn setHidden:YES];
         [btn setUserInteractionEnabled:NO];
         [btn.titleLabel setFont:[UIFont boldSystemFontOfSize:17]];
@@ -174,12 +174,12 @@
     self.functionKeys = funcBtns;
 }
 
-- (void)touchBegin:(UIButton *)b type:(WTKeyboardButtonType)type{
+- (void)touchBegin:(WTKeyboardButton *)b type:(WTKeyboardButtonType)type{
     b.selected = YES;
     self.crtButton = b;
 }
 
-- (void)touchMove:(UIButton *)b type:(WTKeyboardButtonType)type{
+- (void)touchMove:(WTKeyboardButton *)b type:(WTKeyboardButtonType)type{
     b.selected = YES;
     if(self.crtButton != b){
         self.crtButton.selected = NO;
@@ -188,17 +188,17 @@
 }
 
 - (void)touchEnd{
-    for(UIButton *btn in self.characterKeys) btn.selected = NO;
-    for(UIButton *btn in self.functionKeys) btn.selected = NO;
+    for(WTKeyboardButton *btn in self.characterKeys) btn.selected = NO;
+    for(WTKeyboardButton *btn in self.functionKeys) btn.selected = NO;
 }
 
-- (WTKeyFunction)touchEnd:(UIButton *)b{
+- (WTKeyFunction)touchEnd:(WTKeyboardButton *)b{
     b.selected = NO;
     if(!b.titleLabel.text) return WTKeyFunctionCustom;
     return WTKeyFunctionInsert;
 }
 
-- (WTKeyFunction)touchFunctionEnd:(UIButton *)b{
+- (WTKeyFunction)touchFunctionEnd:(WTKeyboardButton *)b{
     b.selected = NO;
     if([b.titleLabel.text isEqualToString:@"取消"]){
         return WTKeyFunctionCancel;
@@ -211,10 +211,10 @@
     }else if ([b.titleLabel.text isEqualToString:@"上证"] || [b.titleLabel.text isEqualToString:@"深证"]){
         return WTKeyFunctionCustom;
     }else if ([b.titleLabel.text isEqualToString:@"ABC"] || [b.titleLabel.text isEqualToString:@"123"]){
-        [self.characterKeys enumerateObjectsUsingBlock:^(UIButton *btn, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.characterKeys enumerateObjectsUsingBlock:^(WTKeyboardButton *btn, NSUInteger idx, BOOL * _Nonnull stop) {
             btn.hidden = !btn.hidden;
         }];
-        [self.functionKeys enumerateObjectsUsingBlock:^(UIButton *btn, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.functionKeys enumerateObjectsUsingBlock:^(WTKeyboardButton *btn, NSUInteger idx, BOOL * _Nonnull stop) {
             btn.hidden = !btn.hidden;
         }];
     }

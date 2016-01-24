@@ -81,21 +81,21 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
     for (int i = 0; i < 26; i++) {
         
         if(i < 10){//1.第一排
-            UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(5 + (SCREEN_SIZE.width - 10) / 10 * i, 10, (SCREEN_SIZE.width - 30) / 10, 44)];
+            WTKeyboardButton *bt = [[WTKeyboardButton alloc]initWithFrame:CGRectMake(5 + (SCREEN_SIZE.width - 10) / 10 * i, 10, (SCREEN_SIZE.width - 30) / 10, 44)];
             [bt setUserInteractionEnabled:NO];
             [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [bt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
             [bt setTitle:kchars[i] forState:UIControlStateNormal];
             [btns addObject:bt];
         }else if (i < 19){//2.第二排
-            UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(20 + (SCREEN_SIZE.width - 40) / 9 * (i - 10), 44 + 10 + 8, (SCREEN_SIZE.width - 60) / 9, 44)];
+            WTKeyboardButton *bt = [[WTKeyboardButton alloc]initWithFrame:CGRectMake(20 + (SCREEN_SIZE.width - 40) / 9 * (i - 10), 44 + 10 + 8, (SCREEN_SIZE.width - 60) / 9, 44)];
             [bt setUserInteractionEnabled:NO];
             [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [bt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
             [bt setTitle:kchars[i] forState:UIControlStateNormal];
             [btns addObject:bt];
         }else{//3.第三排
-            UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(20 + (SCREEN_SIZE.width  - 40) / 9 * (i - 18), (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9, 44)];
+            WTKeyboardButton *bt = [[WTKeyboardButton alloc]initWithFrame:CGRectMake(20 + (SCREEN_SIZE.width  - 40) / 9 * (i - 18), (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9, 44)];
             [bt setUserInteractionEnabled:NO];
             [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [bt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
@@ -108,7 +108,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
     //第二页数字符号（隐藏）
     for(int i = 0; i < 25; i++){
         if(i < 10){//1.第一排
-            UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(5 + (SCREEN_SIZE.width - 10) / 10 * i, 10, (SCREEN_SIZE.width - 30) / 10, 44)];
+            WTKeyboardButton *bt = [[WTKeyboardButton alloc]initWithFrame:CGRectMake(5 + (SCREEN_SIZE.width - 10) / 10 * i, 10, (SCREEN_SIZE.width - 30) / 10, 44)];
             [bt setUserInteractionEnabled:NO];
             bt.hidden = YES;
             [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -116,7 +116,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
             [bt setTitle:kSymbol1[i] forState:UIControlStateNormal];
             [btns addObject:bt];
         }else if (i < 20){//2.第二排
-            UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(5 + (SCREEN_SIZE.width - 10) / 10 * (i - 10), 44 + 10 + 8, (SCREEN_SIZE.width - 30) / 10, 44)];
+            WTKeyboardButton *bt = [[WTKeyboardButton alloc]initWithFrame:CGRectMake(5 + (SCREEN_SIZE.width - 10) / 10 * (i - 10), 44 + 10 + 8, (SCREEN_SIZE.width - 30) / 10, 44)];
             [bt setUserInteractionEnabled:NO];
             bt.hidden = YES;
             [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -124,7 +124,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
             [bt setTitle:kSymbol1[i] forState:UIControlStateNormal];
             [btns addObject:bt];
         }else{//3.第三排
-            UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(20 + (SCREEN_SIZE.width  - 40) / 9 + (SCREEN_SIZE.width - 40) / 9 * 7 / 5 * (i - 20), (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9 * 7 / 5, 44)];
+            WTKeyboardButton *bt = [[WTKeyboardButton alloc]initWithFrame:CGRectMake(20 + (SCREEN_SIZE.width  - 40) / 9 + (SCREEN_SIZE.width - 40) / 9 * 7 / 5 * (i - 20), (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9 * 7 / 5, 44)];
             [bt setUserInteractionEnabled:NO];
             bt.hidden = YES;
             [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -136,35 +136,35 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
     
     //第四排固定位置
     //1.shift
-    UIButton *shiftbt = [[UIButton alloc]initWithFrame:CGRectMake(5, (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9 + 10, 44)];
+    WTKeyboardButton *shiftbt = [[WTKeyboardButton alloc]initWithFrame:CGRectMake(5, (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9 + 10, 44)];
     [shiftbt setUserInteractionEnabled:NO];
     [shiftbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [shiftbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [shiftbt setTitle:@"⬆︎" forState:UIControlStateNormal];
     [funcBtns addObject:shiftbt];
     //2.delete
-    UIButton *deletebt = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width - 5 - (SCREEN_SIZE.width - 60) / 9 - 10, (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9 + 10, 44)];
+    WTKeyboardButton *deletebt = [[WTKeyboardButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width - 5 - (SCREEN_SIZE.width - 60) / 9 - 10, (44 + 8) * 2 + 10, (SCREEN_SIZE.width - 60) / 9 + 10, 44)];
     [deletebt setUserInteractionEnabled:NO];
     [deletebt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [deletebt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [deletebt setTitle:@"退格" forState:UIControlStateNormal];
     [funcBtns addObject:deletebt];
     //3.#+123
-    UIButton *ABCbt = [[UIButton alloc]initWithFrame:CGRectMake(5, (44 + 8) * 3 + 10, 75, 44)];
+    WTKeyboardButton *ABCbt = [[WTKeyboardButton alloc]initWithFrame:CGRectMake(5, (44 + 8) * 3 + 10, 75, 44)];
     [ABCbt setUserInteractionEnabled:NO];
     [ABCbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [ABCbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [ABCbt setTitle:@"#+123" forState:UIControlStateNormal];
     [funcBtns addObject:ABCbt];
     //4.空格
-    UIButton *blankbt = [[UIButton alloc]initWithFrame:CGRectMake(5 + 80, (44 + 8) * 3 + 10, SCREEN_SIZE.width - 160 - 10, 44)];
+    WTKeyboardButton *blankbt = [[WTKeyboardButton alloc]initWithFrame:CGRectMake(5 + 80, (44 + 8) * 3 + 10, SCREEN_SIZE.width - 160 - 10, 44)];
     [blankbt setUserInteractionEnabled:NO];
     [blankbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [blankbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
     [blankbt setTitle:@"空 格" forState:UIControlStateNormal];
     [funcBtns addObject:blankbt];
     //5.完成
-    UIButton *OKbt = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width - 5 - 75, (44 + 8) * 3 + 10, 75, 44)];
+    WTKeyboardButton *OKbt = [[WTKeyboardButton alloc]initWithFrame:CGRectMake(SCREEN_SIZE.width - 5 - 75, (44 + 8) * 3 + 10, 75, 44)];
     [OKbt setUserInteractionEnabled:NO];
     [OKbt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [OKbt setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
@@ -179,7 +179,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
     switch (state) {
         case WTKeyboardCharStateNormal:
         {
-            [self.characterKeys enumerateObjectsUsingBlock:^(UIButton *btn, NSUInteger idx, BOOL *stop) {
+            [self.characterKeys enumerateObjectsUsingBlock:^(WTKeyboardButton *btn, NSUInteger idx, BOOL *stop) {
                 if([kChars containsObject:btn.titleLabel.text]){
                     NSString *title = [btn.titleLabel.text lowercaseString];
                     [btn setTitle:title forState:UIControlStateNormal];
@@ -189,7 +189,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
             break;
         case WTKeyboardCharStateUpper:
         {
-            [self.characterKeys enumerateObjectsUsingBlock:^(UIButton *btn, NSUInteger idx, BOOL *stop) {
+            [self.characterKeys enumerateObjectsUsingBlock:^(WTKeyboardButton *btn, NSUInteger idx, BOOL *stop) {
                 if([kchars containsObject:btn.titleLabel.text]){
                     NSString *title = [btn.titleLabel.text uppercaseString];
                     [btn setTitle:title forState:UIControlStateNormal];
@@ -199,7 +199,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
             break;
         case WTKeyboardCharStateSymbol:
         {
-            [self.characterKeys enumerateObjectsUsingBlock:^(UIButton *btn, NSUInteger idx, BOOL *stop) {
+            [self.characterKeys enumerateObjectsUsingBlock:^(WTKeyboardButton *btn, NSUInteger idx, BOOL *stop) {
                 if([kSymbol1 containsObject:btn.titleLabel.text]){
                     NSInteger index = [kSymbol1 indexOfObject:btn.titleLabel.text];
                     [btn setTitle:kSymbol2[index] forState:UIControlStateNormal];
@@ -209,7 +209,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
             break;
         case WTKeyboardCharStateNum:
         {
-            [self.characterKeys enumerateObjectsUsingBlock:^(UIButton *btn, NSUInteger idx, BOOL *stop) {
+            [self.characterKeys enumerateObjectsUsingBlock:^(WTKeyboardButton *btn, NSUInteger idx, BOOL *stop) {
                 if([kSymbol2 containsObject:btn.titleLabel.text]){
                     NSInteger index = [kSymbol2 indexOfObject:btn.titleLabel.text];
                     [btn setTitle:kSymbol1[index] forState:UIControlStateNormal];
@@ -221,7 +221,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
 }
 
 
-- (void)touchBegin:(UIButton *)b type:(WTKeyboardButtonType)type{
+- (void)touchBegin:(WTKeyboardButton *)b type:(WTKeyboardButtonType)type{
     if(type == WTKeyboardButtonTypeCharacterKey){
         [self addPopupToButton:b];
     }
@@ -229,7 +229,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
     self.crtButton = b;
 }
 
-- (void)touchMove:(UIButton *)b type:(WTKeyboardButtonType)type{
+- (void)touchMove:(WTKeyboardButton *)b type:(WTKeyboardButtonType)type{
     if(self.crtButton != b && type == WTKeyboardButtonTypeCharacterKey){
         //移除imageview
         if ([self.crtButton subviews].count > 1) {
@@ -243,20 +243,20 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
 }
 
 - (void)touchEnd{
-    for(UIButton *btn in self.characterKeys){
+    for(WTKeyboardButton *btn in self.characterKeys){
         if ([btn subviews].count > 1) {
             [[[btn subviews] objectAtIndex:1] removeFromSuperview];
         }
     }
     
-    for(UIButton *btn in self.functionKeys){
+    for(WTKeyboardButton *btn in self.functionKeys){
         if ([btn subviews].count > 1) {
             [[[btn subviews] objectAtIndex:1] removeFromSuperview];
         }
     }
 }
 
-- (WTKeyFunction)touchEnd:(UIButton *)b{
+- (WTKeyFunction)touchEnd:(WTKeyboardButton *)b{
     //移除imageview
     if ([b subviews].count > 1) {
         [[[b subviews] objectAtIndex:1] removeFromSuperview];
@@ -265,7 +265,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
     return WTKeyFunctionInsert;
 }
 
-- (WTKeyFunction)touchFunctionEnd:(UIButton *)b{
+- (WTKeyFunction)touchFunctionEnd:(WTKeyboardButton *)b{
     if([b.titleLabel.text isEqualToString:@"⬆︎"]){
         _shifted = !_shifted;
         if(_symbolPad && _shifted){
@@ -282,13 +282,13 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
     }else if ([b.titleLabel.text isEqualToString:@"#+123"]){
         _symbolPad = YES;
         [b setTitle:@"ABC" forState:UIControlStateNormal];
-        [self.characterKeys enumerateObjectsUsingBlock:^(UIButton *btn, NSUInteger idx, BOOL *stop) {
+        [self.characterKeys enumerateObjectsUsingBlock:^(WTKeyboardButton *btn, NSUInteger idx, BOOL *stop) {
             btn.hidden = !btn.hidden;
         }];
     }else if ([b.titleLabel.text isEqualToString:@"ABC"]){
         _symbolPad = NO;
         [b setTitle:@"#+123" forState:UIControlStateNormal];
-        [self.characterKeys enumerateObjectsUsingBlock:^(UIButton *btn, NSUInteger idx, BOOL *stop) {
+        [self.characterKeys enumerateObjectsUsingBlock:^(WTKeyboardButton *btn, NSUInteger idx, BOOL *stop) {
             btn.hidden = !btn.hidden;
         }];
     }else if ([b.titleLabel.text isEqualToString:@"空 格"]){
@@ -301,7 +301,7 @@ typedef NS_ENUM(NSUInteger, WTKeyboardCharState) {
 
 #pragma mark -
 
-- (void)addPopupToButton:(UIButton *)b {
+- (void)addPopupToButton:(WTKeyboardButton *)b {
     UIImageView *keyPop = nil;
     UILabel *text = [[UILabel alloc] initWithFrame:CGRectMake(15, 5, 52, 60)];
     
