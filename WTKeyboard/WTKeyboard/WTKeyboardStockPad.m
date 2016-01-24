@@ -23,6 +23,7 @@
 
 #import "WTKeyboardStockPad.h"
 #import "WTKeyboardUtils.h"
+#import "WTKeyboardButton.h"
 
 #define kNums   @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0"]
 #define kFuncs  @[@"取消",@"退格",@"确定"]

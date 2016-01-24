@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 #import "WTKeyboardCharPad.h"
+#import "WTKeyboardButton.h"
 
 typedef NS_ENUM(NSUInteger, WTKeyboardViewImageKind) {
     WTKeyboardViewImageKindLeft = 0,

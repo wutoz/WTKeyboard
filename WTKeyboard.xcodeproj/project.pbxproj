@@ -35,6 +35,7 @@
 		D8C126EA1C3EC7BE00E185C5 /* keyboard_W56H82.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126E91C3EC7BE00E185C5 /* keyboard_W56H82.png */; };
 		D8C126F61C3EE36500E185C5 /* keyboard_W520H80.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126F51C3EE36500E185C5 /* keyboard_W520H80.png */; };
 		D8C126F81C3EE43200E185C5 /* keyboard_W96H82.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C126F71C3EE43200E185C5 /* keyboard_W96H82.png */; };
+		D8D2B9C41C5529E0005B4A0C /* WTKeyboardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D2B9C31C5529E0005B4A0C /* WTKeyboardButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		D8C126E91C3EC7BE00E185C5 /* keyboard_W56H82.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_W56H82.png; sourceTree = "<group>"; };
 		D8C126F51C3EE36500E185C5 /* keyboard_W520H80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_W520H80.png; sourceTree = "<group>"; };
 		D8C126F71C3EE43200E185C5 /* keyboard_W96H82.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_W96H82.png; sourceTree = "<group>"; };
+		D8D2B9C21C5529E0005B4A0C /* WTKeyboardButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKeyboardButton.h; sourceTree = "<group>"; };
+		D8D2B9C31C5529E0005B4A0C /* WTKeyboardButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKeyboardButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				D884523A1C2F8BF200CF2428 /* Resources */,
 				D884522B1C2F8BF200CF2428 /* WTKeyboard.h */,
 				D884522C1C2F8BF200CF2428 /* WTKeyboard.m */,
+				D8D2B9C21C5529E0005B4A0C /* WTKeyboardButton.h */,
+				D8D2B9C31C5529E0005B4A0C /* WTKeyboardButton.m */,
 				D88452351C2F8BF200CF2428 /* WTKeyboardProtocol.h */,
 				D884522D1C2F8BF200CF2428 /* WTKeyboardCardPad.h */,
 				D884522E1C2F8BF200CF2428 /* WTKeyboardCardPad.m */,
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D2B9C41C5529E0005B4A0C /* WTKeyboardButton.m in Sources */,
 				D884521B1C2F8BDC00CF2428 /* ViewController.m in Sources */,
 				D88452431C2F8BF200CF2428 /* WTKeyboard.m in Sources */,
 				D88452441C2F8BF200CF2428 /* WTKeyboardCardPad.m in Sources */,

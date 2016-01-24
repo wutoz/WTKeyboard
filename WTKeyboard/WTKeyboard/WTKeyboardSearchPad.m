@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 #import "WTKeyboardSearchPad.h"
+#import "WTKeyboardButton.h"
 
 #define kNums   @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0",@"00",@"000",@"300",@"600"]
 #define kFuncs1 @[@"取消",@"上证",@"深证",@"ABC",@"退格",@"搜索"]
