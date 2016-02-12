@@ -10,4 +10,7 @@
 
 @interface WTKeyboardButton : UIButton
 
+@property (nonatomic, assign) BOOL titleHidden;
+@property (nonatomic, assign) CGSize imageSize;
+
 @end

@@ -48,6 +48,7 @@
 #pragma mark -
 - (instancetype)init{
     if(self = [super init]){
+        self.frame = CGRectMake(0, 0, SCREEN_SIZE.width, KEYBOARD_HEIGHT);
         [self setUp];
     }
     return self;
@@ -69,7 +70,6 @@
 
 #pragma mark -
 - (void)setUp{
-    self.frame = CGRectMake(0, 0, SCREEN_SIZE.width, KEYBOARD_HEIGHT);
     if(!_keyboardtype) [self setKeyboardtype:WTKeyboardTypeNumPad];
     //初始
     [_keyboard initPad];
@@ -306,6 +306,13 @@
                 case WTKeyFunctionClear:
                     while ([self.textView hasText]) {
                         [self.textView deleteBackward];
+                    }
+                    
+                    if([self.textView isKindOfClass:[UITextField class]]){
+                        UITextField *textField = (UITextField *)self.textView;
+                        
+                        if([[textField delegate] respondsToSelector:@selector(textFieldShouldClear:)])
+                            [[textField delegate] textFieldShouldClear:(UITextField *)self.textView];
                     }
                     break;
                 case WTKeyFunctionCustom:

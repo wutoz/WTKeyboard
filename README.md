@@ -4,6 +4,12 @@
 
 WTKeyboard 键盘组件
 
+![WTKeyboard1](https://github.com/wutongr/WTKeyboard/blob/master/ScreenShot1.png)
+
+![WTKeyboard2](https://github.com/wutongr/WTKeyboard/blob/master/ScreenShot2.png)
+
+![WTKeyboard3](https://github.com/wutongr/WTKeyboard/blob/master/ScreenShot3.png)
+
 ## 安装
 
 ### 源文件
