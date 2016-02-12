@@ -10,6 +10,8 @@ WTKeyboard 键盘组件
 
 ![WTKeyboard3](https://github.com/wutongr/WTKeyboard/blob/master/ScreenShot3.png)
 
+![WTKeyboard4](https://github.com/wutongr/WTKeyboard/blob/master/ScreenShot4.png)
+
 ## 安装
 
 ### 源文件
